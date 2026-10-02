@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int I;
+    long PRI = 0, SEG = 1, SIG;
+
+    printf("%ld\t%ld", PRI, SEG);
+
+    for (I = 3; I <= 50; I++)
+    {
+        SIG = PRI + SEG;
+        PRI = SEG;
+        SEG = SIG;
+        printf("\t%ld", SIG);
+    }
+    printf("\n");
+
+    return 0;
+}
